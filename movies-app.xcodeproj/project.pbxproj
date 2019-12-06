@@ -125,6 +125,7 @@
 		7C06EE81239A5F510058F16F /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				7C06EE8C239A61BD0058F16F /* UserStories */,
 				7C0B68D6239A45E400501DF3 /* Main.storyboard */,
 			);
 			path = PresentationLayer;
@@ -147,6 +148,51 @@
 				7C06EE86239A61300058F16F /* Strings.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		7C06EE8C239A61BD0058F16F /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserStories;
+			sourceTree = "<group>";
+		};
+		7C06EE8D239A61CD0058F16F /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		7C06EE8E239A61DB0058F16F /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		7C06EE8F239A61E40058F16F /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7C0B68D0239A45E400501DF3 /* AppDelegate.swift */,
+				7C0B68DE239A45E500501DF3 /* Info.plist */,
+				7C0B68DB239A45E500501DF3 /* LaunchScreen.storyboard */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		7C06EE90239A61EF0058F16F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7C06EE91239A61F60058F16F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7C0B68C4239A45E300501DF3 = {
@@ -174,14 +220,16 @@
 		7C0B68CF239A45E400501DF3 /* movies-app */ = {
 			isa = PBXGroup;
 			children = (
-				7C06EE83239A5F930058F16F /* Generated */,
-				7C06EE82239A5F780058F16F /* Resources */,
+				7C06EE91239A61F60058F16F /* Extensions */,
+				7C06EE90239A61EF0058F16F /* Entities */,
+				7C06EE8F239A61E40058F16F /* ApplicationLayer */,
+				7C06EE8E239A61DB0058F16F /* CoreLayer */,
+				7C06EE8D239A61CD0058F16F /* BusinessLogicLayer */,
 				7C06EE81239A5F510058F16F /* PresentationLayer */,
-				7C0B68D0239A45E400501DF3 /* AppDelegate.swift */,
+				7C06EE82239A5F780058F16F /* Resources */,
+				7C06EE83239A5F930058F16F /* Generated */,
 				7C0B68D2239A45E400501DF3 /* SceneDelegate.swift */,
 				7C0B68D4239A45E400501DF3 /* ViewController.swift */,
-				7C0B68DB239A45E500501DF3 /* LaunchScreen.storyboard */,
-				7C0B68DE239A45E500501DF3 /* Info.plist */,
 			);
 			path = "movies-app";
 			sourceTree = "<group>";
@@ -608,7 +656,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69QXHLFPRG;
-				INFOPLIST_FILE = "movies-app/Info.plist";
+				INFOPLIST_FILE = "movies-app/ApplicationLayer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,7 +675,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69QXHLFPRG;
-				INFOPLIST_FILE = "movies-app/Info.plist";
+				INFOPLIST_FILE = "movies-app/ApplicationLayer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
