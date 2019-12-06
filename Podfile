@@ -7,6 +7,12 @@ target 'movies-app' do
 
   # Pods for movies-app
   
+  # Networking
+  pod 'Alamofire'
+  
+  # Concurrency
+  pod 'PromiseKit'
+  
   # Tools
   pod 'SwiftGen'
   pod 'SwiftLint'
