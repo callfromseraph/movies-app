@@ -1,0 +1,17 @@
+strings:
+  paths: movies-app/Resources/Localizable.strings
+  templateName: structured-swift4
+  output: movies-app/Generated/Strings.swift
+xcassets:
+  paths:
+   - movies-app/Resources/Assets.xcassets
+  templateName: swift4
+  output: movies-app/Generated/Assets.swift
+ib:
+  paths:
+   - movies-app/PresentationLayer
+  templateName: scenes-swift4
+  output: movies-app/Generated/Storyboards.swift
+  params:
+    module: movies-app
+    ignoreTargetModule: true

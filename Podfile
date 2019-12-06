@@ -6,6 +6,9 @@ target 'movies-app' do
   use_frameworks!
 
   # Pods for movies-app
+  
+  # Tools
+  pod 'SwiftGen'
 
   target 'movies-appTests' do
     inherit! :search_paths
