@@ -1,0 +1,28 @@
+opt_in_rules:
+  - force_unwrapping
+  - closure_end_indentation
+  - empty_count
+  # - explicit_type_interface
+  - nimble_operator
+  - vertical_parameter_alignment_on_call
+excluded:
+  - Carthage
+  - Pods
+  - R.generated.swift
+line_length: 
+  - 140
+  - 280
+identifier_name:
+  excluded:
+    - id
+    - x
+    - y
+    - dx
+    - dy
+    - i
+    - to
+    - me
+disabled_rules:
+  - trailing_comma
+  # - todo
+  - trailing_whitespace

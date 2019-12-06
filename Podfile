@@ -9,6 +9,7 @@ target 'movies-app' do
   
   # Tools
   pod 'SwiftGen'
+  pod 'SwiftLint'
 
   target 'movies-appTests' do
     inherit! :search_paths
