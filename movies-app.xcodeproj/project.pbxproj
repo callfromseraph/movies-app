@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,13 @@
 		7C06EE9A239AA5890058F16F /* ModuleInput + ModuleInputProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06EE99239AA5890058F16F /* ModuleInput + ModuleInputProvider.swift */; };
 		7C06EE9C239AA5D10058F16F /* BaseRoutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06EE9B239AA5D10058F16F /* BaseRoutingProtocol.swift */; };
 		7C06EE9E239AA9E00058F16F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06EE9D239AA9E00058F16F /* BaseViewController.swift */; };
+		7C06EEA1239AB0690058F16F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06EEA0239AB0690058F16F /* Networking.swift */; };
+		7C06EEA3239AB18F0058F16F /* NetworkingImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06EEA2239AB18F0058F16F /* NetworkingImp.swift */; };
+		7C07F099239E71EF00644ACA /* ResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07F098239E71EF00644ACA /* ResponseSerializer.swift */; };
+		7C07F09B239E737900644ACA /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07F09A239E737900644ACA /* NetworkingError.swift */; };
+		7C07F09E239E780200644ACA /* RequestGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07F09D239E780200644ACA /* RequestGateway.swift */; };
+		7C07F0A0239E780D00644ACA /* RequestGatewayImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07F09F239E780D00644ACA /* RequestGatewayImp.swift */; };
+		7C07F0A2239E792500644ACA /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07F0A1239E792500644ACA /* RequestMethod.swift */; };
 		7C0B68D1239A45E400501DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0B68D0239A45E400501DF3 /* AppDelegate.swift */; };
 		7C0B68D3239A45E400501DF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0B68D2239A45E400501DF3 /* SceneDelegate.swift */; };
 		7C0B68D5239A45E400501DF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0B68D4239A45E400501DF3 /* ViewController.swift */; };
@@ -60,6 +67,13 @@
 		7C06EE99239AA5890058F16F /* ModuleInput + ModuleInputProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModuleInput + ModuleInputProvider.swift"; sourceTree = "<group>"; };
 		7C06EE9B239AA5D10058F16F /* BaseRoutingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoutingProtocol.swift; sourceTree = "<group>"; };
 		7C06EE9D239AA9E00058F16F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7C06EEA0239AB0690058F16F /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		7C06EEA2239AB18F0058F16F /* NetworkingImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingImp.swift; sourceTree = "<group>"; };
+		7C07F098239E71EF00644ACA /* ResponseSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSerializer.swift; sourceTree = "<group>"; };
+		7C07F09A239E737900644ACA /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		7C07F09D239E780200644ACA /* RequestGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestGateway.swift; sourceTree = "<group>"; };
+		7C07F09F239E780D00644ACA /* RequestGatewayImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestGatewayImp.swift; sourceTree = "<group>"; };
+		7C07F0A1239E792500644ACA /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		7C0B68CD239A45E400501DF3 /* Movies App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movies App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C0B68D0239A45E400501DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C0B68D2239A45E400501DF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +182,7 @@
 		7C06EE8D239A61CD0058F16F /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				7C07F09C239E77F100644ACA /* Gateways */,
 			);
 			path = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -175,6 +190,7 @@
 		7C06EE8E239A61DB0058F16F /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				7C06EE9F239AB04C0058F16F /* Networking */,
 				7C06EE96239AA4FC0058F16F /* Protocols */,
 				7C06EE95239AA4EE0058F16F /* BaseClasses */,
 			);
@@ -194,6 +210,7 @@
 		7C06EE90239A61EF0058F16F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				7C07F09A239E737900644ACA /* NetworkingError.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -221,6 +238,26 @@
 				7C06EE9B239AA5D10058F16F /* BaseRoutingProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7C06EE9F239AB04C0058F16F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7C06EEA0239AB0690058F16F /* Networking.swift */,
+				7C06EEA2239AB18F0058F16F /* NetworkingImp.swift */,
+				7C07F098239E71EF00644ACA /* ResponseSerializer.swift */,
+				7C07F0A1239E792500644ACA /* RequestMethod.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7C07F09C239E77F100644ACA /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				7C07F09D239E780200644ACA /* RequestGateway.swift */,
+				7C07F09F239E780D00644ACA /* RequestGatewayImp.swift */,
+			);
+			path = Gateways;
 			sourceTree = "<group>";
 		};
 		7C0B68C4239A45E300501DF3 = {
@@ -558,13 +595,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C06EEA3239AB18F0058F16F /* NetworkingImp.swift in Sources */,
 				7C06EE98239AA50E0058F16F /* BaseHandlerController.swift in Sources */,
+				7C07F09E239E780200644ACA /* RequestGateway.swift in Sources */,
+				7C07F0A0239E780D00644ACA /* RequestGatewayImp.swift in Sources */,
+				7C06EEA1239AB0690058F16F /* Networking.swift in Sources */,
 				7C0B68D5239A45E400501DF3 /* ViewController.swift in Sources */,
 				7C06EE9C239AA5D10058F16F /* BaseRoutingProtocol.swift in Sources */,
+				7C07F0A2239E792500644ACA /* RequestMethod.swift in Sources */,
 				7C06EE8A239A61300058F16F /* Storyboards.swift in Sources */,
 				7C06EE8B239A61300058F16F /* Assets.swift in Sources */,
 				7C06EE9E239AA9E00058F16F /* BaseViewController.swift in Sources */,
 				7C06EE9A239AA5890058F16F /* ModuleInput + ModuleInputProvider.swift in Sources */,
+				7C07F099239E71EF00644ACA /* ResponseSerializer.swift in Sources */,
+				7C07F09B239E737900644ACA /* NetworkingError.swift in Sources */,
 				7C0B68D1239A45E400501DF3 /* AppDelegate.swift in Sources */,
 				7C06EE89239A61300058F16F /* Strings.swift in Sources */,
 				7C0B68D3239A45E400501DF3 /* SceneDelegate.swift in Sources */,
