@@ -21,7 +21,7 @@ final class PopularMoviesListAssembly: Assembly {
                 networking: self.networking.netwokring,
                 parameters: [
                     "api_key": L10n.apiKey,
-                    "langiage": "en-US"
+                    "language": "en-US"
                 ],
                 headers: [
                     "Content-Type": "application/json",
