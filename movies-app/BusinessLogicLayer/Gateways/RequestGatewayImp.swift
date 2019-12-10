@@ -40,7 +40,7 @@ final class RequestGatewayImp: RequestGateway {
             networking.request(
                 method: method,
                 route: route,
-                parameters: parameters,
+                parameters: self.parameters,
                 headers: headers
             ).done { result in
                 seal.fulfill(result)
