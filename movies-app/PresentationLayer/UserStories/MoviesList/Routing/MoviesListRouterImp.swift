@@ -10,4 +10,5 @@ import Foundation
 
 final class MoviesListRouterImp: MoviesListRouter {
     
+    var viewController: BaseHandlerController?
 }

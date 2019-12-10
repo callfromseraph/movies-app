@@ -13,7 +13,7 @@ class MoviesListAssembly: Assembly {
     
     lazy var usecasesAssembly = PopularMoviesListAssembly.instance()
     
-    var moviesListRouter: MoviesListRouter {
+    var moviesListRouter: MoviesListRouterImp {
         return define(init: MoviesListRouterImp())
     }
     

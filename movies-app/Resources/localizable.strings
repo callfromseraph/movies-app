@@ -7,3 +7,6 @@
 */
 
 "api_key" = "e1e23a5bd892bf9b19b7f9f402bed470";
+
+"adult" = "18+";
+"not_adult" = "0+";

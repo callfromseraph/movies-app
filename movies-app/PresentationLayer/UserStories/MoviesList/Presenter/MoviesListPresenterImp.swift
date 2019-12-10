@@ -17,6 +17,19 @@ final class MoviesListPresenterImp: MoviesListPresenter {
     }
     
     func loadMovies(completion: @escaping Response) {
+        let route: String = "discover/movie"
+        let parameters: [String: Any] = [:]
         
+        moviesListUseCase.getPopularMovies(
+            route: route,
+            parameters: parameters,
+            genreId: 0,
+            type: 0
+        ).done { movies in
+            print(movies)
+        }
+        .catch { error in
+            completion(error)
+        }
     }
 }

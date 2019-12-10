@@ -11,8 +11,12 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
+  /// 18+
+  internal static let adult = L10n.tr("Localizable", "adult")
   /// e1e23a5bd892bf9b19b7f9f402bed470
   internal static let apiKey = L10n.tr("Localizable", "api_key")
+  /// 0+
+  internal static let notAdult = L10n.tr("Localizable", "not_adult")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name
