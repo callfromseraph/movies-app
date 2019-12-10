@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
+  - EasyDi (1.6.1)
   - PromiseKit (6.12.0):
     - PromiseKit/CorePromise (= 6.12.0)
     - PromiseKit/Foundation (= 6.12.0)
@@ -14,6 +15,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - EasyDi
   - PromiseKit
   - SwiftGen
   - SwiftLint
@@ -21,16 +23,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - EasyDi
     - PromiseKit
     - SwiftGen
     - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  EasyDi: 3d7d4c0d3ad2d78b3ff22d4755590d32945f69cc
   PromiseKit: c06835ba442ce5454ce3cdde470232804a6e4ff8
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 4105f061f9812b214568b736dab580ab2c73a582
 
-PODFILE CHECKSUM: 27143f317352df83cf1b9c0c92cd4ddd9c1e24ce
+PODFILE CHECKSUM: af455a4d423a21dea280a969d0ec9ea247ee1e29
 
 COCOAPODS: 1.8.4

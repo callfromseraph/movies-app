@@ -13,6 +13,9 @@ target 'movies-app' do
   # Concurrency
   pod 'PromiseKit'
   
+  # DI
+  pod 'EasyDi'
+  
   # Tools
   pod 'SwiftGen'
   pod 'SwiftLint'

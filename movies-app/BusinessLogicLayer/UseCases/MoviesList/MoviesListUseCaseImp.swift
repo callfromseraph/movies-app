@@ -17,7 +17,7 @@ class MoviesListUseCaseImp: MoviesListUseCase {
         self.requestGateway = requestGateway
     }
     
-    func getPopularMovies(route: String, parameters: [String : Any]?, genreId: Int, type: Int) -> Promise<MoviesList> {
+    func getPopularMovies(route: String, parameters: [String: Any]?, genreId: Int, type: Int) -> Promise<MoviesList> {
         page += 1
         var newParameters = parameters
         if newParameters != nil {
