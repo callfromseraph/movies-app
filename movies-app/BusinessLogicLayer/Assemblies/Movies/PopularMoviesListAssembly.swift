@@ -1,5 +1,5 @@
 //
-//  MoviesListAssembly.swift
+//  PopularMoviesListAssembly.swift
 //  movies-app
 //
 //  Created by David Petrosyan on 12/10/19.
@@ -9,7 +9,7 @@
 import Foundation
 import EasyDi
 
-final class MoviesListAssembly: Assembly {
+final class PopularMoviesListAssembly: Assembly {
     
     lazy var networking: NetworkingAssembly = self.context.assembly()
     
