@@ -35,7 +35,7 @@ extension DataRequest {
     }
     
     static func jsonResponseSerializer<T: Codable>() -> DataResponseSerializer<T> {
-        return DataResponseSerializer { _, response, data, error in
+        return DataResponseSerializer { request, response, data, error in
             guard error == nil else { return .failure(NetworkingError.networkError) }
             let result = Request.serializeResponseData(response: response, data: data, error: nil)
             guard case let .success(validData) = result else {

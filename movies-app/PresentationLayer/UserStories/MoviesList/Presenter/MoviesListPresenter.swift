@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import PromiseKit
 
 protocol MoviesListPresenter: ModuleInput {
-    func loadMovies(completion: @escaping Response)
+    func loadMovies(completion: @escaping Response) -> Promise<MoviesList>
 }

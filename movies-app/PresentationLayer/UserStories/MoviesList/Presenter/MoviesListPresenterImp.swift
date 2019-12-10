@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 final class MoviesListPresenterImp: MoviesListPresenter {
     
@@ -16,20 +17,23 @@ final class MoviesListPresenterImp: MoviesListPresenter {
         self.moviesListUseCase = moviesListUseCase
     }
     
-    func loadMovies(completion: @escaping Response) {
-        let route: String = "discover/movie"
+    func loadMovies(completion: @escaping Response) -> Promise<MoviesList> {
+        let route: String = "/discover/movie"
         let parameters: [String: Any] = [:]
         
-        moviesListUseCase.getPopularMovies(
-            route: route,
-            parameters: parameters,
-            genreId: 0,
-            type: 0
-        ).done { movies in
-            print(movies)
-        }
-        .catch { error in
-            completion(error)
+        return Promise { seal in
+            moviesListUseCase.getPopularMovies(
+                route: route,
+                parameters: parameters,
+                genreId: 1,
+                type: 1
+            ).done { movies in
+                seal.fulfill(movies)
+            }
+            .catch { error in
+                seal.reject(error)
+//                completion(error)
+            }
         }
     }
 }

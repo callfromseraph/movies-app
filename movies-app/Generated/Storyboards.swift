@@ -12,10 +12,10 @@ import UIKit
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
 internal enum StoryboardScene {
-  internal enum Main: StoryboardType {
-    internal static let storyboardName = "Main"
+  internal enum MoviesList: StoryboardType {
+    internal static let storyboardName = "MoviesList"
 
-    internal static let initialScene = InitialSceneType<ViewController>(storyboard: Main.self)
+    internal static let initialScene = InitialSceneType<MoviesListViewController>(storyboard: MoviesList.self)
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name

@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import PromiseKit
 
 class MoviesListViewController: BaseViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var presenter: MoviesListPresenter!
     var router: MoviesListRouterImp!
+    
+    var movies = [Movie]()
     
     // MARK: - Lifecycle
     
@@ -22,11 +27,41 @@ class MoviesListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        collectionView.register(UINib(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "movieCell")
+        
         router.viewController = self
         presenter.loadMovies { error in
             if error != nil {
                 print(error)
             }
+        }.done { movies in
+            self.movies = movies.results
+            self.collectionView.reloadData()
         }
+    }
+}
+
+extension MoviesListViewController: UICollectionViewDelegate {
+    
+}
+
+extension MoviesListViewController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return movies.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as? MovieCollectionViewCell else { return UICollectionViewCell() }
+        let movie = self.movies[indexPath.item]
+        cell.setContent(image: nil, title: movie.name ?? "default", vote: movie.averageVote, adult: movie.adult ?? false)
+        return cell
     }
 }
