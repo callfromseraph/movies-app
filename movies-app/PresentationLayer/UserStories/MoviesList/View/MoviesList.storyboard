@@ -39,7 +39,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Qt-lQ-0Xr" firstAttribute="top" secondItem="TRG-kx-Mh4" secondAttribute="top" id="Awp-uc-RaU"/>
-                            <constraint firstItem="TRG-kx-Mh4" firstAttribute="bottom" secondItem="6Qt-lQ-0Xr" secondAttribute="bottom" id="Kna-Vr-e0g"/>
+                            <constraint firstAttribute="bottom" secondItem="6Qt-lQ-0Xr" secondAttribute="bottom" id="Kna-Vr-e0g"/>
                             <constraint firstItem="TRG-kx-Mh4" firstAttribute="trailing" secondItem="6Qt-lQ-0Xr" secondAttribute="trailing" id="k2o-NT-AKy"/>
                             <constraint firstItem="6Qt-lQ-0Xr" firstAttribute="leading" secondItem="TRG-kx-Mh4" secondAttribute="leading" id="zHL-gT-W85"/>
                         </constraints>
