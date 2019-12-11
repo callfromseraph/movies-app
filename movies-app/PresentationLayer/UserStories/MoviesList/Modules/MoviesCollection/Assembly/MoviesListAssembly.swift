@@ -11,7 +11,7 @@ import EasyDi
 
 class MoviesListAssembly: Assembly {
     
-    lazy var usecasesAssembly = PopularMoviesListAssembly.instance()
+    lazy var usecasesAssembly = MoviesListNetworkingAssembly.instance()
     
     var moviesListRouter: MoviesListRouterImp {
         return define(init: MoviesListRouterImp())

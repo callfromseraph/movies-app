@@ -9,7 +9,7 @@
 import Foundation
 import EasyDi
 
-final class PopularMoviesListAssembly: Assembly {
+final class MoviesListNetworkingAssembly: Assembly {
     
     lazy var networking: NetworkingAssembly = self.context.assembly()
     
