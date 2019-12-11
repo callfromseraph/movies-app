@@ -19,7 +19,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel! {
         didSet {
-            titleLabel.textAlignment = .center
+            titleLabel.textAlignment = .left
             titleLabel.textColor = UIColor.TitleTextColor
             titleLabel.font = UIFont.TitleContent
         }
@@ -49,5 +49,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
         self.titleLabel.text = title
         self.averageVoteLabel.text = String(vote)
         self.ageLabel.text = adult ? L10n.adult : L10n.notAdult
+        self.posterImageView.downloadedFrom(link: image, contentMode: .scaleAspectFill)
     }
 }

@@ -61,7 +61,7 @@ extension MoviesListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as? MovieCollectionViewCell else { return UICollectionViewCell() }
         let movie = self.movies[indexPath.item]
-        cell.setContent(image: nil, title: movie.name ?? "default", vote: movie.averageVote, adult: movie.adult ?? false)
+        cell.setContent(image: movie.posterPath, title: movie.title ?? "default", vote: movie.averageVote, adult: movie.adult ?? false)
         return cell
     }
 }

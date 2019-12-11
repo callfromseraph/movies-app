@@ -7,6 +7,7 @@
 */
 
 "api_key" = "e1e23a5bd892bf9b19b7f9f402bed470";
+"base_URL_for_images" = "https://image.tmdb.org/t/p/w500";
 
 "adult" = "18+";
 "not_adult" = "0+";

@@ -15,6 +15,8 @@ internal enum L10n {
   internal static let adult = L10n.tr("Localizable", "adult")
   /// e1e23a5bd892bf9b19b7f9f402bed470
   internal static let apiKey = L10n.tr("Localizable", "api_key")
+  /// https://image.tmdb.org/t/p/w500
+  internal static let baseURLForImages = L10n.tr("Localizable", "base_URL_for_images")
   /// 0+
   internal static let notAdult = L10n.tr("Localizable", "not_adult")
 }
