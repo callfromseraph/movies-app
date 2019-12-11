@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  MainContainerController.swift
 //  movies-app
 //
 //  Created by David Petrosyan on 12/11/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class MainViewController: BaseViewController {
+final class MainContainerController: BaseViewController {
 
     @IBOutlet weak var genresCollectionView: UICollectionView!
     

@@ -12,3 +12,7 @@ import PromiseKit
 protocol MoviesListPresenter: ModuleInput {
     func loadMovies(completion: @escaping Response) -> Promise<MoviesList>
 }
+
+protocol MoviesListPresenterInput: ModuleInput {
+    func set(genre: Genre, type: Int)
+}

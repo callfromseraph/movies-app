@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-1481" y="161"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Main Container Controller-->
         <scene sceneID="PUw-2h-muU">
             <objects>
-                <viewController id="1Fw-1d-Tft" customClass="MainViewController" customModule="Movies_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Fw-1d-Tft" customClass="MainContainerController" customModule="Movies_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qhx-QD-aVv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="233" y="23"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Main Page View Controller-->
         <scene sceneID="i9N-eR-mbE">
             <objects>
-                <viewController id="QCq-2f-W7H" customClass="UIPageViewController" sceneMemberID="viewController">
+                <viewController id="QCq-2f-W7H" customClass="MainPageViewController" customModule="Movies_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x3I-H4-REX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="590"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
