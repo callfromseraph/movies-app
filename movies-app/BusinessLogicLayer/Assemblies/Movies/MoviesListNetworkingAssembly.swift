@@ -32,12 +32,37 @@ final class MoviesListNetworkingAssembly: Assembly {
         )
     }
     
+    var genresGateway: RequestGateway {
+        return define(scope: .lazySingleton, init:
+            RequestGatewayImp(
+                networking: self.networking.netwokring,
+                parameters: [
+                    "api_key": L10n.apiKey,
+                    "language": "en-US"
+                ],
+                headers: [
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                ],
+                method: RequestMethod.GET
+            )
+        )
+    }
+    
     // MARK: - UseCases
     
     var moviesListUsecase: MoviesListUseCase {
-        return define(scope: .lazySingleton, init:
+        return define(init:
             MoviesListUseCaseImp(
                 requestGateway: self.moviesGateway
+            )
+        )
+    }
+    
+    var genresUseCase: GenresUseCase {
+        return define(init:
+            GenresUseCaseImp(
+                requestGateway: self.genresGateway
             )
         )
     }

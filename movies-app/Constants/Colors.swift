@@ -16,6 +16,8 @@ extension UIColor {
     
     static let TitleTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     
+    static let TabNameColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)
+    
     static let ContentTextColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.6)
     
     static let PosterBackgroundColor = #colorLiteral(red: 0.09803921569, green: 0.09803921569, blue: 0.09803921569, alpha: 1)

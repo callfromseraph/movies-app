@@ -46,13 +46,30 @@
                                     <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MGw-7w-fJb">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="genreName" id="MGw-7w-fJb" customClass="GenreNameCollectionViewCell" customModule="Movies_App" customModuleProvider="target">
                                         <rect key="frame" x="16" y="0.0" width="50" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="32"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7G3-tt-cHB">
+                                                    <rect key="frame" x="4" y="6" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="7G3-tt-cHB" firstAttribute="top" secondItem="MGw-7w-fJb" secondAttribute="top" id="38K-hI-ttA"/>
+                                            <constraint firstItem="7G3-tt-cHB" firstAttribute="leading" secondItem="MGw-7w-fJb" secondAttribute="leading" id="Uae-A6-k8t"/>
+                                            <constraint firstAttribute="trailing" secondItem="7G3-tt-cHB" secondAttribute="trailing" id="VA9-NT-TTa"/>
+                                            <constraint firstAttribute="bottom" secondItem="7G3-tt-cHB" secondAttribute="bottom" id="dqe-OZ-6PV"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="genreNameLabel" destination="7G3-tt-cHB" id="ZX8-hR-8TJ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -97,7 +114,7 @@
         <!--Movies List View Controller-->
         <scene sceneID="pTm-Rt-iNg">
             <objects>
-                <viewController id="5Ac-7B-1L8" customClass="MoviesListViewController" customModule="Movies_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoviesList" id="5Ac-7B-1L8" customClass="MoviesListViewController" customModule="Movies_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TUH-zi-0Dx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,6 +165,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="590"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Rne-An-Beg"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgU-dk-mtC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

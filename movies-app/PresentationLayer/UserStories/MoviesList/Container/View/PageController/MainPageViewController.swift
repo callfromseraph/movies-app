@@ -19,7 +19,7 @@ final class MainPageViewController: UIPageViewController, MainPageViewController
     var moduleInput: ModuleInput!
     
     var currentViewController: UIViewController?
-    var currentIndex: Int?
+    var currentIndex: Int = 1
     var previousIndex: Int = 1
     private var pendingIndex: Int?
     
@@ -28,6 +28,18 @@ final class MainPageViewController: UIPageViewController, MainPageViewController
     func set(pages: [Genre], storyboardName: String) {
         self.storyboardName = storyboardName
         self.genres = pages
+        
+        pagedViewControllers = [:]
+        viewPages = []
+        currentViewController = nil
+        currentIndex = 1
+        previousIndex = 1
+        pendingIndex = nil
+
+        pages.forEach { page in
+            pagedViewControllers[page] = getViewController(with: "MoviesList")
+            viewPages.append(pagedViewControllers[page]!)
+        }
     }
     
     override func setViewControllers(_ viewControllers: [UIViewController]?, direction: UIPageViewController.NavigationDirection, animated: Bool, completion: ((Bool) -> Void)? = nil) {
@@ -46,7 +58,8 @@ final class MainPageViewController: UIPageViewController, MainPageViewController
     }
     
     func configureModule(with genre: Genre, configurationClosure: @escaping ConfigurationClosure) {
-        
+        guard let pagedVC = pagedViewControllers[genre] as? ModuleInputProvider else { fatalError() }
+        configurationClosure(pagedVC.moduleInput)
     }
     
     private func getViewController(with identifier: String) -> UIViewController {
@@ -103,7 +116,7 @@ extension MainPageViewController: UIPageViewControllerDelegate {
             if let index = pendingIndex {
                 currentIndex = index
                 previousIndex = viewPages.firstIndex(of: previousViewControllers.last!)!
-                pageDelegate?.pageDidChange(to: index, from: previousIndex)
+                pageDelegate?.pageDidChange(toIndex: index, fromIndex: previousIndex)
             }
         }
     }

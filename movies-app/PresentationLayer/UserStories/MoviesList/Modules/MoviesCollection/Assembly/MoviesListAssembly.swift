@@ -17,16 +17,31 @@ class MoviesListAssembly: Assembly {
         return define(init: MoviesListRouterImp())
     }
     
+    var moviesListDataSource: MoviesListDataSource {
+        return define(init: MoviesListDataSource())
+    }
+    
     var moviesListPresenter: MoviesListPresenter {
         return define(init:
             MoviesListPresenterImp(
-                moviesListUseCase: self.usecasesAssembly.moviesListUsecase
+                moviesListUseCase: self.usecasesAssembly.moviesListUsecase,
+                dataSource: self.moviesListDataSource
+            )
+        )
+    }
+    
+    var moviesDisplayManager: MoviesListDisplayManager {
+        return define(init:
+            MoviesListDisplayManager(
+                moviesListDataSource: self.moviesListDataSource,
+                moviesListPresenter: self.moviesListPresenter
             )
         )
     }
     
     func inject(into controller: MoviesListViewController) {
         defineInjection(into: controller) {
+            $0.moviesDisplayManager = self.moviesDisplayManager
             $0.presenter = self.moviesListPresenter
             $0.router = self.moviesListRouter
             $0.moduleInput = self.moviesListPresenter

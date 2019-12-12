@@ -45,10 +45,10 @@ class MovieCollectionViewCell: UICollectionViewCell {
         self.backgroundColor = UIColor.PosterBackgroundColor
     }
     
-    func setContent(image: String?, title: String, vote: Float, adult: Bool) {
-        self.titleLabel.text = title
-        self.averageVoteLabel.text = String(vote)
-        self.ageLabel.text = adult ? L10n.adult : L10n.notAdult
-        self.posterImageView.downloadedFrom(link: image, contentMode: .scaleAspectFill)
+    func setContent(for movie: CategorizedMovie) {
+        self.titleLabel.text = movie.title
+        self.averageVoteLabel.text = String(movie.averageVote)
+        self.ageLabel.text = (movie.adult ?? false) ? L10n.adult : L10n.notAdult
+        self.posterImageView.downloadedFrom(link: movie.posterPath, contentMode: .scaleAspectFill)
     }
 }

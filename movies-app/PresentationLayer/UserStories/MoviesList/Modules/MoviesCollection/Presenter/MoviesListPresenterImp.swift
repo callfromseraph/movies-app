@@ -7,33 +7,40 @@
 //
 
 import Foundation
-import PromiseKit
 
-final class MoviesListPresenterImp: MoviesListPresenter {
+final class MoviesListPresenterImp: MoviesListPresenter, MoviesListPresenterInput {
+    
+    var dataSource: MoviesListDataSourceInput
     
     private var moviesListUseCase: MoviesListUseCase
+    private var genre: Genre!
     
-    init(moviesListUseCase: MoviesListUseCase) {
+    init(
+        moviesListUseCase: MoviesListUseCase,
+        dataSource: MoviesListDataSourceInput
+    ) {
         self.moviesListUseCase = moviesListUseCase
+        self.dataSource = dataSource
     }
     
-    func loadMovies(completion: @escaping Response) -> Promise<MoviesList> {
+    func set(genre: Genre, type: Int) {
+        self.genre = genre
+    }
+    
+    func loadMovies(completion: @escaping Response) {
         let route: String = "/discover/movie"
         let parameters: [String: Any] = [:]
         
-        return Promise { seal in
             moviesListUseCase.getPopularMovies(
                 route: route,
                 parameters: parameters,
                 genreId: 1,
                 type: 1
             ).done { movies in
-                seal.fulfill(movies)
+                self.dataSource.present(movies: movies)
             }
             .catch { error in
-                seal.reject(error)
-//                completion(error)
+                completion(error)
             }
-        }
     }
 }

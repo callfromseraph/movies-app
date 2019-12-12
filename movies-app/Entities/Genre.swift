@@ -12,3 +12,7 @@ struct Genre: Codable, Hashable {
     let id: Int
     let name: String
 }
+
+struct Genres: Codable {
+    let genres: [Genre]
+}

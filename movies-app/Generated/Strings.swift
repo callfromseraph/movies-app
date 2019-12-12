@@ -19,6 +19,11 @@ internal enum L10n {
   internal static let baseURLForImages = L10n.tr("Localizable", "base_URL_for_images")
   /// 0+
   internal static let notAdult = L10n.tr("Localizable", "not_adult")
+
+  internal enum Movies {
+    /// MoviesList
+    internal static let storyboardName = L10n.tr("Localizable", "movies.storyboard_name")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

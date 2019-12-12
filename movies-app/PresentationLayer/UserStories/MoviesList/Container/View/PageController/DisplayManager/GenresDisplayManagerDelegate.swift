@@ -1,5 +1,5 @@
 //
-//  GenresPresenter.swift
+//  GenresDisplayManagerDelegate.swift
 //  movies-app
 //
 //  Created by David Petrosyan on 12/11/19.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol GenresPresenter: ModuleInput {
-    func setGenres(completion: @escaping Response)
+protocol GenresDisplayManagerDelegate: class {
+    func didSelectGenre(at indexPath: IndexPath)
 }

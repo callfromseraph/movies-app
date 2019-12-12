@@ -7,12 +7,13 @@
 //
 
 import Foundation
-import PromiseKit
 
 protocol MoviesListPresenter: ModuleInput {
-    func loadMovies(completion: @escaping Response) -> Promise<MoviesList>
+    func loadMovies(completion: @escaping Response)
 }
 
 protocol MoviesListPresenterInput: ModuleInput {
+    var dataSource: MoviesListDataSourceInput { get }
+    
     func set(genre: Genre, type: Int)
 }

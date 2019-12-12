@@ -11,3 +11,6 @@
 
 "adult" = "18+";
 "not_adult" = "0+";
+
+
+"movies.storyboard_name" = "MoviesList";

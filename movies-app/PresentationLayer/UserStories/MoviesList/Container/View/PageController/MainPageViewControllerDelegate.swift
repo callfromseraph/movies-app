@@ -7,5 +7,5 @@
 //
 
 protocol MainPageViewControllerDelegate: class {
-    func pageDidChange(to index: Int, from index: Int)
+    func pageDidChange(toIndex: Int, fromIndex: Int)
 }

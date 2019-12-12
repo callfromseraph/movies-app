@@ -10,5 +10,5 @@ import Foundation
 import PromiseKit
 
 protocol MoviesListUseCase: class {
-    func getPopularMovies(route: String, parameters: [String: Any]? , genreId: Int, type: Int) -> Promise<MoviesList>
+    func getPopularMovies(route: String, parameters: [String: Any]? , genreId: Int, type: Int) -> Promise<[CategorizedMovie]>
 }
