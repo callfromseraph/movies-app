@@ -14,6 +14,7 @@ extension UIImageView {
     
     func downloadedFrom(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         contentMode = mode
+        self.kf.indicatorType = .activity
         self.kf.setImage(with: url)
 //        URLSession.shared.dataTask(with: url) { data, response, error in
 //            guard
