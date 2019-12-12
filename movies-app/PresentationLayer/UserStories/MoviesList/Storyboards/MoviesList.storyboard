@@ -83,7 +83,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Otk-db-FGh">
                                 <rect key="frame" x="0.0" y="77" width="375" height="590"/>
                                 <connections>
-                                    <segue destination="QCq-2f-W7H" kind="embed" id="suF-OX-8Hk"/>
+                                    <segue destination="Tfp-NQ-2l9" kind="embed" id="5ZG-zD-g94"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -158,19 +158,12 @@
             <point key="canvasLocation" x="233" y="23"/>
         </scene>
         <!--Main Page View Controller-->
-        <scene sceneID="i9N-eR-mbE">
+        <scene sceneID="06s-Ky-G32">
             <objects>
-                <viewController id="QCq-2f-W7H" customClass="MainPageViewController" customModule="Movies_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="x3I-H4-REX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="590"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Rne-An-Beg"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NgU-dk-mtC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Tfp-NQ-2l9" customClass="MainPageViewController" customModule="Movies_App" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0aR-0O-56s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-671" y="879"/>
+            <point key="canvasLocation" x="-671" y="900"/>
         </scene>
     </scenes>
 </document>

@@ -33,6 +33,7 @@ class MoviesListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         router.viewController = self
+        moviesDisplayManager.moviesCollectionView = collectionView
         presenter.loadMovies { error in
             if error != nil {
                 print(error)
