@@ -48,15 +48,3 @@ extension MoviesListViewController: MoviesListDisplayManagerDelegate {
 //        call to router
     }
 }
-
-//extension MoviesListViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(
-//        _ collectionView: UICollectionView,
-//        layout collectionViewLayout: UICollectionViewLayout,
-//        sizeForItemAt indexPath: IndexPath
-//    ) -> CGSize {
-//        let width = (self.view.bounds.width - 32 - 16) / 2
-//        let height = width * 1.9
-//        return CGSize.init(width: width, height: height)
-//    }
-//}

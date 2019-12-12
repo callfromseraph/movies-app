@@ -28,8 +28,14 @@ final class MoviesListPresenterImp: MoviesListPresenter, MoviesListPresenterInpu
     }
     
     func loadMovies(completion: @escaping Response) {
-        let route: String = "/discover/movie"
-        let parameters: [String: Any] = [:]
+        var route: String = "/discover/movie"
+        var parameters: [String: Any] = [:]
+        
+        if genre.id > -1 {
+            parameters["with_genres"] = String(genre.id)
+        } else if genre.id == -2 {
+            route = "/movie/now_playing"
+        }
         
             moviesListUseCase.getPopularMovies(
                 route: route,
