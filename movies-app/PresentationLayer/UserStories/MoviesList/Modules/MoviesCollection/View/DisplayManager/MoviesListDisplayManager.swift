@@ -38,6 +38,23 @@ final class MoviesListDisplayManager: NSObject {
     }
 }
 
+extension MoviesListDisplayManager: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        let deltaOffset = maximumOffset - currentOffset
+        
+        if deltaOffset <= 0 {
+            moviesListPresenter.loadMovies { error in
+                if error != nil {
+                    print(error?.localizedDescription)
+                }
+            }
+        }
+    }
+}
+
 extension MoviesListDisplayManager: MoviesListDataSourceDelegate {
     
     func didAddMovies(with indexPaths: [IndexPath]) {
