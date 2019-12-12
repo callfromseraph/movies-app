@@ -7,6 +7,9 @@ target 'movies-app' do
 
   # Pods for movies-app
   
+  # UI
+  pod 'Kingfisher'
+  
   # Networking
   pod 'Alamofire'
   
