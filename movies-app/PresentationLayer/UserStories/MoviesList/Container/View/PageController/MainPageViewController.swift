@@ -8,9 +8,9 @@
 
 import UIKit
 
-final class MainPageViewController: UIPageViewController, MainPageViewControllerHandler, ModuleInputProvider {
+final class MainPageViewController: UIPageViewController, ModuleInputProvider {
     
-    weak var pageDelegate: MainPageViewControllerDelegate?
+    // MARK: - Properties
     
     var genres: [Genre] = []
     var viewPages: [UIViewController] = []
@@ -24,6 +24,51 @@ final class MainPageViewController: UIPageViewController, MainPageViewController
     private var pendingIndex: Int?
     
     private var storyboardName: String!
+    
+    weak var pageDelegate: MainPageViewControllerDelegate?
+    
+    // MARK: - Methods
+    
+    func configureModule(with genre: Genre, configurationClosure: @escaping ConfigurationClosure) {
+        guard let pagedVC = pagedViewControllers[genre] as? ModuleInputProvider else { fatalError() }
+        configurationClosure(pagedVC.moduleInput)
+    }
+    
+    private func getViewController(with identifier: String) -> UIViewController {
+        return UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(identifier: identifier)
+    }
+    
+    // MARK: - Lifecycle
+    
+    override func setViewControllers(
+        _ viewControllers: [UIViewController]?,
+        direction: UIPageViewController.NavigationDirection,
+        animated: Bool,
+        completion: ((Bool) -> Void)? = nil
+    ) {
+        super.setViewControllers(
+            viewControllers,
+            direction: direction,
+            animated: animated,
+            completion: completion
+        )
+        
+        guard let viewController = viewControllers?.first else {
+            fatalError("Could not set empty viewController")
+        }
+        self.currentViewController = viewController
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        dataSource = self
+        delegate = self
+    }
+}
+
+    // MARK: - Controller Handler
+
+extension MainPageViewController: MainPageViewControllerHandler {
     
     func set(pages: [Genre], storyboardName: String) {
         self.storyboardName = storyboardName
@@ -41,35 +86,16 @@ final class MainPageViewController: UIPageViewController, MainPageViewController
             viewPages.append(pagedViewControllers[page]!)
         }
     }
-    
-    override func setViewControllers(_ viewControllers: [UIViewController]?, direction: UIPageViewController.NavigationDirection, animated: Bool, completion: ((Bool) -> Void)? = nil) {
-        super.setViewControllers(viewControllers, direction: direction, animated: animated, completion: completion)
-        
-        guard let viewController = viewControllers?.first else {
-            fatalError("Could not set empty viewController")
-        }
-        self.currentViewController = viewController
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        dataSource = self
-        delegate = self
-    }
-    
-    func configureModule(with genre: Genre, configurationClosure: @escaping ConfigurationClosure) {
-        guard let pagedVC = pagedViewControllers[genre] as? ModuleInputProvider else { fatalError() }
-        configurationClosure(pagedVC.moduleInput)
-    }
-    
-    private func getViewController(with identifier: String) -> UIViewController {
-        return UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(identifier: identifier)
-    }
 }
+
+    // MARK: - PageViewControllerDataSource
 
 extension MainPageViewController: UIPageViewControllerDataSource {
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    func pageViewController(
+        _ pageViewController: UIPageViewController,
+        viewControllerBefore viewController: UIViewController
+    ) -> UIViewController? {
         guard let viewControllerIndex = viewPages.firstIndex(of: viewController) else { return nil }
         let previousIndex = viewControllerIndex - 1
         guard previousIndex >= 0 else { return nil }
@@ -87,7 +113,10 @@ extension MainPageViewController: UIPageViewControllerDataSource {
         return viewPages[previousIndex]
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    func pageViewController(
+        _ pageViewController: UIPageViewController,
+        viewControllerAfter viewController: UIViewController
+    ) -> UIViewController? {
         guard let viewControllerIndex = viewPages.firstIndex(of: viewController) else { return nil }
         let nextIndex = viewControllerIndex + 1
         guard nextIndex < viewPages.count else { return nil }
@@ -106,12 +135,19 @@ extension MainPageViewController: UIPageViewControllerDataSource {
     }
 }
 
+    // MARK: - PageViewControllerDelegate
+
 extension MainPageViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
         pendingIndex = viewPages.firstIndex(of: pendingViewControllers.first!)
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    func pageViewController(
+        _ pageViewController: UIPageViewController,
+        didFinishAnimating finished: Bool,
+        previousViewControllers: [UIViewController],
+        transitionCompleted completed: Bool
+    ) {
         if completed {
             if let index = pendingIndex {
                 currentIndex = index

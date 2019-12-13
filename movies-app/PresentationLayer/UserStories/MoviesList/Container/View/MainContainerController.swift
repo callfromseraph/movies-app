@@ -9,8 +9,8 @@
 import UIKit
 
 final class MainContainerController: BaseViewController {
-
-    @IBOutlet weak var genresCollectionView: UICollectionView!
+    
+    // MARK: - Properties
     
     private let storyboardName = L10n.Movies.storyboardName
     private var firstPage: UIViewController!
@@ -21,6 +21,12 @@ final class MainContainerController: BaseViewController {
     var router: MoviesContainerRouter!
     var genresDisplayManager: GenresDisplayManagerImp!
     var genresDataSource: GenresDataSourceOutput!
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var genresCollectionView: UICollectionView!
+    
+    // MARK: - Setup
     
     func customize() {
         view.backgroundColor = UIColor.MainBackgroundColor
@@ -40,6 +46,8 @@ final class MainContainerController: BaseViewController {
             self.pageViewController = pageView
         }
     }
+    
+    // MARK: Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -63,6 +71,8 @@ final class MainContainerController: BaseViewController {
         navigationItem.title = Bundle.main.object(forInfoDictionaryKey: "AppName") as? String
     }
 }
+
+    // MARK: - GenresDelegate
 
 extension MainContainerController: GenresDelegate {
     
@@ -95,6 +105,8 @@ extension MainContainerController: GenresDelegate {
     }
 }
 
+    // MARK: - GenresDisplayManagerDelegate
+
 extension MainContainerController: GenresDisplayManagerDelegate {
     
     func didSelectGenre(at indexPath: IndexPath) {
@@ -123,6 +135,8 @@ extension MainContainerController: GenresDisplayManagerDelegate {
         }
     }
 }
+
+    // MARK: - MainPageViewControllerDelegate
 
 extension MainContainerController: MainPageViewControllerDelegate {
     

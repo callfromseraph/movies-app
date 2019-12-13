@@ -9,6 +9,9 @@
 import UIKit
 
 final class MoviesListDisplayManager: NSObject {
+    
+    // MARK: - Properties
+    
     private let reuseIdentifier = "movieCell"
     
     private var moviesListDataSource: MoviesListDataSourceOutput
@@ -22,9 +25,15 @@ final class MoviesListDisplayManager: NSObject {
         didSet {
             moviesCollectionView?.dataSource = self
             moviesCollectionView?.delegate = self
-            moviesCollectionView?.register(UINib(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+            moviesCollectionView?.register(
+                UINib(
+                    nibName: "MovieCollectionViewCell",
+                    bundle: nil),
+                forCellWithReuseIdentifier: reuseIdentifier)
         }
     }
+    
+    // MARK: - Initialization
     
     init(
         moviesListDataSource: MoviesListDataSourceOutput,
@@ -37,6 +46,8 @@ final class MoviesListDisplayManager: NSObject {
         self.moviesListDataSource.delegate = self
     }
 }
+
+    // MARK: - ScrollViewDelegate
 
 extension MoviesListDisplayManager: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -55,6 +66,8 @@ extension MoviesListDisplayManager: UIScrollViewDelegate {
     }
 }
 
+    // MARK: - DataSourceDelegate
+
 extension MoviesListDisplayManager: MoviesListDataSourceDelegate {
     
     func didAddMovies(with indexPaths: [IndexPath]) {
@@ -65,12 +78,17 @@ extension MoviesListDisplayManager: MoviesListDataSourceDelegate {
     }
 }
 
+    // MARK: - CollectionViewDelegate
+
 extension MoviesListDisplayManager: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedMovie = self.moviesListDataSource.movies[indexPath.item]
         delegate?.didSelectMovie(with: selectedMovie.id)
     }
 }
+
+    // MARK: - CollectionViewDataSource
 
 extension MoviesListDisplayManager: UICollectionViewDataSource {
     
@@ -79,8 +97,10 @@ extension MoviesListDisplayManager: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? MovieCollectionViewCell else {
-            fatalError("Failed to cast cell to MovieCollectionViewCell")
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: self.reuseIdentifier,
+            for: indexPath) as? MovieCollectionViewCell else {
+                fatalError("Failed to cast cell to MovieCollectionViewCell")
         }
         
         let movie = moviesListDataSource.movies[indexPath.item]
@@ -88,6 +108,8 @@ extension MoviesListDisplayManager: UICollectionViewDataSource {
         return cell
     }
 }
+
+    // MARK: - Flow Layout
 
 extension MoviesListDisplayManager: UICollectionViewDelegateFlowLayout {
     func collectionView(

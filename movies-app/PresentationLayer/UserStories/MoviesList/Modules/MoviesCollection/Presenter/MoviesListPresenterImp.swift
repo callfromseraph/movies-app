@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class MoviesListPresenterImp: MoviesListPresenter, MoviesListPresenterInput {
+final class MoviesListPresenterImp: MoviesListPresenter {
     
     var dataSource: MoviesListDataSourceInput
     
@@ -23,10 +23,6 @@ final class MoviesListPresenterImp: MoviesListPresenter, MoviesListPresenterInpu
         self.dataSource = dataSource
     }
     
-    func set(genre: Genre, type: Int) {
-        self.genre = genre
-    }
-    
     func loadMovies(completion: @escaping Response) {
         var route: String = "/discover/movie"
         var parameters: [String: Any] = [:]
@@ -37,16 +33,25 @@ final class MoviesListPresenterImp: MoviesListPresenter, MoviesListPresenterInpu
             route = "/movie/now_playing"
         }
         
-            moviesListUseCase.getPopularMovies(
-                route: route,
-                parameters: parameters,
-                genreId: 1,
-                type: 1
-            ).done { movies in
-                self.dataSource.present(movies: movies)
-            }
-            .catch { error in
-                completion(error)
-            }
+        moviesListUseCase.getPopularMovies(
+            route: route,
+            parameters: parameters,
+            genreId: 1,
+            type: 1
+        ).done { movies in
+            self.dataSource.present(movies: movies)
+        }
+        .catch { error in
+            completion(error)
+        }
+    }
+}
+
+    // MARK: - Module Input
+
+extension MoviesListPresenterImp: MoviesListPresenterInput {
+    
+    func set(genre: Genre, type: Int) {
+        self.genre = genre
     }
 }

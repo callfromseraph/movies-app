@@ -11,7 +11,7 @@ import PromiseKit
 
 class MoviesListViewController: BaseViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    // MARK: - Properties
     
     var presenter: MoviesListPresenter!
     var router: MoviesListRouterImp!
@@ -22,6 +22,10 @@ class MoviesListViewController: BaseViewController {
             moviesDisplayManager.controller = self
         }
     }
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Lifecycle
     
@@ -41,6 +45,8 @@ class MoviesListViewController: BaseViewController {
         }
     }
 }
+
+    // MARK: - Display Manager Delegate
 
 extension MoviesListViewController: MoviesListDisplayManagerDelegate {
     

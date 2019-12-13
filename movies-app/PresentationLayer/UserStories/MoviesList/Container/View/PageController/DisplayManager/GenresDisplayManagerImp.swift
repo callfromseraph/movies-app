@@ -11,6 +11,8 @@ import UIKit
 
 final class GenresDisplayManagerImp: NSObject {
     
+    // MARK: - Properties
+    
     private let reuseIdentifier = "genreName"
     private var genresDataSource: GenresDataSourceOutput
     
@@ -23,17 +25,25 @@ final class GenresDisplayManagerImp: NSObject {
         }
     }
     
+    // MARK: - Initialization
+    
     init(genresDataSource: GenresDataSourceOutput) {
         self.genresDataSource = genresDataSource
     }
 }
 
+    // MARK: - CollectionViewDataSource
+
 extension GenresDisplayManagerImp: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.genresDataSource.genres.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: self.reuseIdentifier,
             for: indexPath
@@ -43,6 +53,8 @@ extension GenresDisplayManagerImp: UICollectionViewDataSource {
         return cell
     }
 }
+
+    // MARK: - FlowLayout
 
 extension GenresDisplayManagerImp: UICollectionViewDelegateFlowLayout {
     

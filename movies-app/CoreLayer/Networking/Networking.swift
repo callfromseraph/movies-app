@@ -10,6 +10,7 @@ import Foundation
 import PromiseKit
 
 protocol Networking: class {
+    
     func request(
         method: RequestMethod,
         route: String,

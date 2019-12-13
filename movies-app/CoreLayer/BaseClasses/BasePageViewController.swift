@@ -8,7 +8,9 @@
 
 import UIKit
 
-class BasePageViewController: UIPageViewController, BasePageViewControllerHandler, ModuleInputProvider {
+class BasePageViewController: UIPageViewController, ModuleInputProvider {
+    
+    // MARK: - Properties
     
     var moduleInput: ModuleInput!
     var storyboardName = "Main"
@@ -19,16 +21,13 @@ class BasePageViewController: UIPageViewController, BasePageViewControllerHandle
     private var currentIndex: Int?
     private var pendingIndex: Int?
     
-    func set(pages: [String], storyboardName: String) {
-        self.storyboardName = storyboardName
-        pages.forEach { page in
-            viewPages.append(getViewController(with: page))
-        }
-    }
+    // MARK: - Private
     
-    func getViewController(with identifier: String) -> UIViewController {
+    private func getViewController(with identifier: String) -> UIViewController {
         return UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(identifier: identifier)
     }
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +35,20 @@ class BasePageViewController: UIPageViewController, BasePageViewControllerHandle
         delegate = self
     }
 }
+
+    // MARK: - Controller Handler
+
+extension BasePageViewController: BasePageViewControllerHandler {
+    
+    func set(pages: [String], storyboardName: String) {
+        self.storyboardName = storyboardName
+        pages.forEach { page in
+            viewPages.append(getViewController(with: page))
+        }
+    }
+}
+
+    // MARK: - PageViewControllerDelegate
 
 extension BasePageViewController: UIPageViewControllerDelegate {
     
@@ -57,6 +70,8 @@ extension BasePageViewController: UIPageViewControllerDelegate {
         }
     }
 }
+
+    // MARK: - PageViewControllerDataSource
 
 extension BasePageViewController: UIPageViewControllerDataSource {
     
