@@ -18,7 +18,7 @@ final class MoviesListNetworkingAssembly: Assembly {
     var moviesGateway: RequestGateway {
         return define(scope: .lazySingleton, init:
             RequestGatewayImp(
-                networking: self.networking.netwokring,
+                networking: self.networking.networking,
                 parameters: [
                     "api_key": L10n.apiKey,
                     "language": "en-US"
@@ -35,7 +35,7 @@ final class MoviesListNetworkingAssembly: Assembly {
     var genresGateway: RequestGateway {
         return define(scope: .lazySingleton, init:
             RequestGatewayImp(
-                networking: self.networking.netwokring,
+                networking: self.networking.networking,
                 parameters: [
                     "api_key": L10n.apiKey,
                     "language": "en-US"

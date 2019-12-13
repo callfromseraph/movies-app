@@ -10,7 +10,7 @@ import Foundation
 import EasyDi
 
 final class NetworkingAssembly: Assembly {
-    var netwokring: Networking {
+    var networking: Networking {
         return define(scope: .lazySingleton, init:
             NetworkingImp(
                 baseURL: "https://api.themoviedb.org/3"

@@ -93,6 +93,7 @@
 		7CD182FE23A3AB3800965E03 /* GalleryUseCaseImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD182FD23A3AB3800965E03 /* GalleryUseCaseImp.swift */; };
 		7CD1830123A3BD4600965E03 /* RecommendationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1830023A3BD4600965E03 /* RecommendationsUseCase.swift */; };
 		7CD1830323A3BDDE00965E03 /* RecommendationsUseCaseImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1830223A3BDDE00965E03 /* RecommendationsUseCaseImp.swift */; };
+		7CD1830623A3BEF700965E03 /* MovieDetailsNetworkingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1830523A3BEF700965E03 /* MovieDetailsNetworkingAssembly.swift */; };
 		C577AE138AA78C36E9964A3C /* Pods_movies_app_movies_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F1EDD3B40545A7EF51B21E /* Pods_movies_app_movies_appUITests.framework */; };
 		D1D4A6FF8E61E02996613433 /* Pods_movies_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A27C1BAD86BE9397D87D74 /* Pods_movies_app.framework */; };
 		EA8D31D9AED5A71C233D0FAC /* Pods_movies_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9BC7FC771ECBFF0CE9DB1D /* Pods_movies_appTests.framework */; };
@@ -216,6 +217,7 @@
 		7CD182FD23A3AB3800965E03 /* GalleryUseCaseImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryUseCaseImp.swift; sourceTree = "<group>"; };
 		7CD1830023A3BD4600965E03 /* RecommendationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsUseCase.swift; sourceTree = "<group>"; };
 		7CD1830223A3BDDE00965E03 /* RecommendationsUseCaseImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsUseCaseImp.swift; sourceTree = "<group>"; };
+		7CD1830523A3BEF700965E03 /* MovieDetailsNetworkingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsNetworkingAssembly.swift; sourceTree = "<group>"; };
 		82A27C1BAD86BE9397D87D74 /* Pods_movies_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movies_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BA6A873535BE3A16E94CB1 /* Pods-movies-app-movies-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movies-app-movies-appUITests.release.xcconfig"; path = "Target Support Files/Pods-movies-app-movies-appUITests/Pods-movies-app-movies-appUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D082CB9291D81E7D66C671A2 /* Pods-movies-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movies-app.release.xcconfig"; path = "Target Support Files/Pods-movies-app/Pods-movies-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -594,6 +596,7 @@
 		7C07F0B4239F88CB00644ACA /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
+				7CD1830423A3BEDC00965E03 /* MovieDetails */,
 				7C07F0B5239F88EE00644ACA /* Movies */,
 			);
 			path = Assemblies;
@@ -820,6 +823,14 @@
 				7CD1830223A3BDDE00965E03 /* RecommendationsUseCaseImp.swift */,
 			);
 			path = Recommendations;
+			sourceTree = "<group>";
+		};
+		7CD1830423A3BEDC00965E03 /* MovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				7CD1830523A3BEF700965E03 /* MovieDetailsNetworkingAssembly.swift */,
+			);
+			path = MovieDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1116,6 +1127,7 @@
 				7CD182DC23A37B7F00965E03 /* BasePageViewControllerHandler.swift in Sources */,
 				7CD182F823A3AA0400965E03 /* ReviewUseCaseImp.swift in Sources */,
 				7CD182E723A39FD600965E03 /* CastUseCaseImp.swift in Sources */,
+				7CD1830623A3BEF700965E03 /* MovieDetailsNetworkingAssembly.swift in Sources */,
 				7C07F0D0239FAA7800644ACA /* Colors.swift in Sources */,
 				7C07F0A6239E894400644ACA /* Movie.swift in Sources */,
 				7C07F09E239E780200644ACA /* RequestGateway.swift in Sources */,
