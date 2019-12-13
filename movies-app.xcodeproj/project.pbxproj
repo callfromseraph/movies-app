@@ -76,6 +76,8 @@
 		7CBCB14C23A1524F00B2F484 /* GenresUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCB14B23A1524F00B2F484 /* GenresUseCase.swift */; };
 		7CBCB14E23A1528C00B2F484 /* GenresUseCaseImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCB14D23A1528C00B2F484 /* GenresUseCaseImp.swift */; };
 		7CBCB15023A22EE900B2F484 /* StringSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCB14F23A22EE900B2F484 /* StringSize.swift */; };
+		7CD182DC23A37B7F00965E03 /* BasePageViewControllerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD182DB23A37B7F00965E03 /* BasePageViewControllerHandler.swift */; };
+		7CD182DE23A37F4800965E03 /* BasePageViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD182DD23A37F4800965E03 /* BasePageViewControllerDelegate.swift */; };
 		C577AE138AA78C36E9964A3C /* Pods_movies_app_movies_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F1EDD3B40545A7EF51B21E /* Pods_movies_app_movies_appUITests.framework */; };
 		D1D4A6FF8E61E02996613433 /* Pods_movies_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A27C1BAD86BE9397D87D74 /* Pods_movies_app.framework */; };
 		EA8D31D9AED5A71C233D0FAC /* Pods_movies_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9BC7FC771ECBFF0CE9DB1D /* Pods_movies_appTests.framework */; };
@@ -182,6 +184,8 @@
 		7CBCB14B23A1524F00B2F484 /* GenresUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresUseCase.swift; sourceTree = "<group>"; };
 		7CBCB14D23A1528C00B2F484 /* GenresUseCaseImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresUseCaseImp.swift; sourceTree = "<group>"; };
 		7CBCB14F23A22EE900B2F484 /* StringSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSize.swift; sourceTree = "<group>"; };
+		7CD182DB23A37B7F00965E03 /* BasePageViewControllerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewControllerHandler.swift; sourceTree = "<group>"; };
+		7CD182DD23A37F4800965E03 /* BasePageViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePageViewControllerDelegate.swift; sourceTree = "<group>"; };
 		82A27C1BAD86BE9397D87D74 /* Pods_movies_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movies_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BA6A873535BE3A16E94CB1 /* Pods-movies-app-movies-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movies-app-movies-appUITests.release.xcconfig"; path = "Target Support Files/Pods-movies-app-movies-appUITests/Pods-movies-app-movies-appUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D082CB9291D81E7D66C671A2 /* Pods-movies-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movies-app.release.xcconfig"; path = "Target Support Files/Pods-movies-app/Pods-movies-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -455,9 +459,11 @@
 		7C06EE96239AA4FC0058F16F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				7CD182DB23A37B7F00965E03 /* BasePageViewControllerHandler.swift */,
 				7C06EE97239AA50E0058F16F /* BaseHandlerController.swift */,
 				7C06EE99239AA5890058F16F /* ModuleInput + ModuleInputProvider.swift */,
 				7C06EE9B239AA5D10058F16F /* BaseRoutingProtocol.swift */,
+				7CD182DD23A37F4800965E03 /* BasePageViewControllerDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1004,6 +1010,7 @@
 				7CBCB13E23A14B8E00B2F484 /* GenresDataSourceImp.swift in Sources */,
 				7C06EE98239AA50E0058F16F /* BaseHandlerController.swift in Sources */,
 				7C07F0AD239F778B00644ACA /* MoviesListUseCase.swift in Sources */,
+				7CD182DC23A37B7F00965E03 /* BasePageViewControllerHandler.swift in Sources */,
 				7C07F0D0239FAA7800644ACA /* Colors.swift in Sources */,
 				7C07F0A6239E894400644ACA /* Movie.swift in Sources */,
 				7C07F09E239E780200644ACA /* RequestGateway.swift in Sources */,
@@ -1014,6 +1021,7 @@
 				7C06EEA1239AB0690058F16F /* Networking.swift in Sources */,
 				7C06EE9C239AA5D10058F16F /* BaseRoutingProtocol.swift in Sources */,
 				7CBCB15023A22EE900B2F484 /* StringSize.swift in Sources */,
+				7CD182DE23A37F4800965E03 /* BasePageViewControllerDelegate.swift in Sources */,
 				7C05D35C23A0EF7700E4F34A /* MainContainerController.swift in Sources */,
 				7CBCB14323A14D6F00B2F484 /* GenresDisplayManagerImp.swift in Sources */,
 				7C07F0A2239E792500644ACA /* RequestMethod.swift in Sources */,
