@@ -9,7 +9,7 @@
 import Foundation
 import PromiseKit
 
-class MoviesListUseCaseImp: MoviesListUseCase {
+final class MoviesListUseCaseImp: MoviesListUseCase {
     private var requestGateway: RequestGateway
     private var page = 0
     

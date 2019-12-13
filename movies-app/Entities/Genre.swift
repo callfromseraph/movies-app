@@ -6,8 +6,6 @@
 //  Copyright © 2019 David Petrosyan. All rights reserved.
 //
 
-import Foundation
-
 struct Genre: Codable, Hashable {
     let id: Int
     let name: String

@@ -6,8 +6,6 @@
 //  Copyright © 2019 David Petrosyan. All rights reserved.
 //
 
-import Foundation
-
 struct Movie: Codable {
     
     let id: Int
