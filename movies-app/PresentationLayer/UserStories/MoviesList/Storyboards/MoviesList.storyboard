@@ -151,11 +151,22 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="6Qt-lQ-0Xr" id="eO9-3d-Khr"/>
+                        <segue destination="kRu-aP-wig" kind="show" identifier="MovieDetails" id="Dns-Ns-f0f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3p-rk-PxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="233" y="23"/>
+        </scene>
+        <!--MovieDetails-->
+        <scene sceneID="lCG-Zx-mOp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MovieDetails" id="kRu-aP-wig" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KZ9-av-RKl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qF5-Zf-vbX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047" y="-54"/>
         </scene>
         <!--Main Page View Controller-->
         <scene sceneID="06s-Ky-G32">

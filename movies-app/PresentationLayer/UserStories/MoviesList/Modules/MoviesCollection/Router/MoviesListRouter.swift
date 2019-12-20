@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MoviesListRouter {
-    
+    func openFilmDetails(for id: Int, with type: Int)
 }

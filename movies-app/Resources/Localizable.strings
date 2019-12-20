@@ -12,5 +12,10 @@
 "adult" = "18+";
 "not_adult" = "0+";
 
-
 "movies.storyboard_name" = "MoviesList";
+
+"movie_details.storyboard_name" = "MovieDetails";
+
+"module.movie_details" = "MovieDetails";
+"module.movies" = "Movies";
+"module.search" = "Search";

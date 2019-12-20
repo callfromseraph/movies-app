@@ -14,6 +14,14 @@ import UIKit
 internal enum StoryboardScene {
   internal enum MovieDetails: StoryboardType {
     internal static let storyboardName = "MovieDetails"
+
+    internal static let initialScene = InitialSceneType<MovieDetailsViewController>(storyboard: MovieDetails.self)
+
+    internal static let cast = SceneType<CastViewController>(storyboard: MovieDetails.self, identifier: "cast")
+
+    internal static let info = SceneType<UIKit.UIViewController>(storyboard: MovieDetails.self, identifier: "info")
+
+    internal static let review = SceneType<ReviewViewController>(storyboard: MovieDetails.self, identifier: "review")
   }
   internal enum MoviesList: StoryboardType {
     internal static let storyboardName = "MoviesList"

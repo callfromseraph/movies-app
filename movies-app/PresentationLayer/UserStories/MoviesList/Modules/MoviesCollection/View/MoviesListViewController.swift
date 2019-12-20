@@ -51,6 +51,6 @@ class MoviesListViewController: BaseViewController {
 extension MoviesListViewController: MoviesListDisplayManagerDelegate {
     
     func didSelectMovie(with id: Int) {
-//        call to router
+        router.openFilmDetails(for: id, with: 0)
     }
 }

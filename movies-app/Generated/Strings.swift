@@ -20,6 +20,20 @@ internal enum L10n {
   /// 0+
   internal static let notAdult = L10n.tr("Localizable", "not_adult")
 
+  internal enum Module {
+    /// MovieDetails
+    internal static let movieDetails = L10n.tr("Localizable", "module.movie_details")
+    /// Movies
+    internal static let movies = L10n.tr("Localizable", "module.movies")
+    /// Search
+    internal static let search = L10n.tr("Localizable", "module.search")
+  }
+
+  internal enum MovieDetails {
+    /// MovieDetails
+    internal static let storyboardName = L10n.tr("Localizable", "movie_details.storyboard_name")
+  }
+
   internal enum Movies {
     /// MoviesList
     internal static let storyboardName = L10n.tr("Localizable", "movies.storyboard_name")
