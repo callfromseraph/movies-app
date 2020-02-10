@@ -70,6 +70,12 @@
 		7C0B68DD239A45E500501DF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C0B68DB239A45E500501DF3 /* LaunchScreen.storyboard */; };
 		7C0B68E8239A45E500501DF3 /* movies_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0B68E7239A45E500501DF3 /* movies_appTests.swift */; };
 		7C0B68F3239A45E500501DF3 /* movies_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0B68F2239A45E500501DF3 /* movies_appUITests.swift */; };
+		7C17689A23F176E200D4C9F1 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17689923F176E200D4C9F1 /* MovieInfoViewController.swift */; };
+		7C17689C23F1771A00D4C9F1 /* MovieInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17689B23F1771A00D4C9F1 /* MovieInfoRouter.swift */; };
+		7C17689E23F177AC00D4C9F1 /* MovieInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17689D23F177AC00D4C9F1 /* MovieInfoPresenter.swift */; };
+		7C1768A023F177B600D4C9F1 /* MovieInfoPresenterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17689F23F177B600D4C9F1 /* MovieInfoPresenterImp.swift */; };
+		7C1768A223F177C300D4C9F1 /* MovieInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1768A123F177C300D4C9F1 /* MovieInfoAssembly.swift */; };
+		7C1768A423F177D900D4C9F1 /* MovieInfoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1768A323F177D900D4C9F1 /* MovieInfoRouterInput.swift */; };
 		7C4B7839239FD25400662543 /* Segoe UI, Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B7837239FD25400662543 /* Segoe UI, Regular.ttf */; };
 		7C4B783A239FD25400662543 /* seguisb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B7838239FD25400662543 /* seguisb.ttf */; };
 		7C58D9E223ACF62C00665B27 /* CastRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58D9E123ACF62C00665B27 /* CastRouterInput.swift */; };
@@ -211,6 +217,12 @@
 		7C0B68EE239A45E500501DF3 /* movies-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "movies-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C0B68F2239A45E500501DF3 /* movies_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movies_appUITests.swift; sourceTree = "<group>"; };
 		7C0B68F4239A45E500501DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C17689923F176E200D4C9F1 /* MovieInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
+		7C17689B23F1771A00D4C9F1 /* MovieInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoRouter.swift; sourceTree = "<group>"; };
+		7C17689D23F177AC00D4C9F1 /* MovieInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoPresenter.swift; sourceTree = "<group>"; };
+		7C17689F23F177B600D4C9F1 /* MovieInfoPresenterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoPresenterImp.swift; sourceTree = "<group>"; };
+		7C1768A123F177C300D4C9F1 /* MovieInfoAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoAssembly.swift; sourceTree = "<group>"; };
+		7C1768A323F177D900D4C9F1 /* MovieInfoRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoRouterInput.swift; sourceTree = "<group>"; };
 		7C4B7832239FD1EC00662543 /* Segoe UI, Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI, Regular.ttf"; sourceTree = "<group>"; };
 		7C4B7834239FD1F100662543 /* seguisb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = seguisb.ttf; sourceTree = "<group>"; };
 		7C4B7837239FD25400662543 /* Segoe UI, Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI, Regular.ttf"; sourceTree = "<group>"; };
@@ -351,6 +363,10 @@
 		7C03E2CD23A7ABEA00554E5B /* Info */ = {
 			isa = PBXGroup;
 			children = (
+				7C17689823F1765000D4C9F1 /* Assembly */,
+				7C17689723F1764600D4C9F1 /* Presenter */,
+				7C17689623F1764000D4C9F1 /* Router */,
+				7C17689523F1763000D4C9F1 /* View */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -802,6 +818,40 @@
 				7C0B68F4239A45E500501DF3 /* Info.plist */,
 			);
 			path = "movies-appUITests";
+			sourceTree = "<group>";
+		};
+		7C17689523F1763000D4C9F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C17689923F176E200D4C9F1 /* MovieInfoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C17689623F1764000D4C9F1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7C1768A323F177D900D4C9F1 /* MovieInfoRouterInput.swift */,
+				7C17689B23F1771A00D4C9F1 /* MovieInfoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7C17689723F1764600D4C9F1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7C17689D23F177AC00D4C9F1 /* MovieInfoPresenter.swift */,
+				7C17689F23F177B600D4C9F1 /* MovieInfoPresenterImp.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7C17689823F1765000D4C9F1 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				7C1768A123F177C300D4C9F1 /* MovieInfoAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		7C4B7836239FD24500662543 /* Fonts */ = {
@@ -1369,6 +1419,7 @@
 				7C03E2DD23A7B68A00554E5B /* MovieDetailsAssembly.swift in Sources */,
 				7CD182EA23A3A01A00965E03 /* Cast.swift in Sources */,
 				7CD182EC23A3A47D00965E03 /* DetailsUseCase.swift in Sources */,
+				7C17689A23F176E200D4C9F1 /* MovieInfoViewController.swift in Sources */,
 				7C06EEA1239AB0690058F16F /* Networking.swift in Sources */,
 				7C58D9E223ACF62C00665B27 /* CastRouterInput.swift in Sources */,
 				7C06EE9C239AA5D10058F16F /* BaseRoutingProtocol.swift in Sources */,
@@ -1383,6 +1434,7 @@
 				7C05D37D23A11BEE00E4F34A /* CategorizedMovie.swift in Sources */,
 				7C07F0C6239F91C200644ACA /* MoviesListViewController.swift in Sources */,
 				7C07F0AF239F779800644ACA /* MoviesListUseCaseImp.swift in Sources */,
+				7C1768A423F177D900D4C9F1 /* MovieInfoRouterInput.swift in Sources */,
 				7CD182F023A3A4CA00965E03 /* Details.swift in Sources */,
 				7CBCB14C23A1524F00B2F484 /* GenresUseCase.swift in Sources */,
 				7CD182E523A39FCD00965E03 /* CastUseCase.swift in Sources */,
@@ -1394,6 +1446,7 @@
 				7C05D37423A117C200E4F34A /* MoviesListDataSource.swift in Sources */,
 				7C6818DB23A8C27A00EFFEDD /* CastViewController.swift in Sources */,
 				7C07F0C0239F8DA300644ACA /* MoviesListPresenterImp.swift in Sources */,
+				7C17689C23F1771A00D4C9F1 /* MovieInfoRouter.swift in Sources */,
 				7C06EE8A239A61300058F16F /* Storyboards.swift in Sources */,
 				7C58D9E823ACF73000665B27 /* CastPresenterImp.swift in Sources */,
 				7C06EE8B239A61300058F16F /* Assets.swift in Sources */,
@@ -1409,10 +1462,12 @@
 				7C05D38223A127A600E4F34A /* MoviesListDisplayManagerDelegate.swift in Sources */,
 				7CBCB14E23A1528C00B2F484 /* GenresUseCaseImp.swift in Sources */,
 				7CBCB13A23A14B0000B2F484 /* GenresDataSourceOutput.swift in Sources */,
+				7C17689E23F177AC00D4C9F1 /* MovieInfoPresenter.swift in Sources */,
 				7CBCB13823A14AC200B2F484 /* GenresDataSourceInput.swift in Sources */,
 				7CD1830123A3BD4600965E03 /* RecommendationsUseCase.swift in Sources */,
 				7C05D37623A117DA00E4F34A /* MoviesListDataSourceInput.swift in Sources */,
 				7C07F099239E71EF00644ACA /* ResponseSerializer.swift in Sources */,
+				7C1768A023F177B600D4C9F1 /* MovieInfoPresenterImp.swift in Sources */,
 				7C07F09B239E737900644ACA /* NetworkingError.swift in Sources */,
 				7C07F0A8239E8A8C00644ACA /* MoviesList.swift in Sources */,
 				7CBCB13C23A14B5100B2F484 /* GenresDelegate.swift in Sources */,
@@ -1429,6 +1484,7 @@
 				7C05D35E23A0F3F500E4F34A /* MoviesContainerAssembly.swift in Sources */,
 				7C05D36623A0F48500E4F34A /* MoviesContainerRouterImp.swift in Sources */,
 				7C6818CF23A7BF2100EFFEDD /* MovieDetailsViewController.swift in Sources */,
+				7C1768A223F177C300D4C9F1 /* MovieInfoAssembly.swift in Sources */,
 				7C0B68D3239A45E400501DF3 /* SceneDelegate.swift in Sources */,
 				7C6818D523A8C23B00EFFEDD /* ReviewViewController.swift in Sources */,
 				7C58D9F323B0BAFF00665B27 /* CastAssembly.swift in Sources */,
