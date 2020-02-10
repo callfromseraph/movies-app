@@ -1,0 +1,23 @@
+### Headers settings
+company: David Petrosyan
+
+### Xcode project settings
+project_name: movies-app
+xcodeproj_path: movies-app.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: movies-app
+
+# The file path for new modules
+project_file_path: movies-app/PresentationLayer/UserStories/
+
+# The Xcode group path to new modules
+project_group_path: movies-app/PresentationLayer/UserStories/
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: swifty_mvp, git: 'https://gitlab.com/ios-architecture-templates/swifty_mvp.git'}
