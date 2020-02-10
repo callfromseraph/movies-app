@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dAN-5R-el8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dAN-5R-el8">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,9 +21,9 @@
                                     <constraint firstAttribute="height" constant="27" id="3yk-rE-g3M"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title="Third"/>
+                                    <segment title="Info"/>
+                                    <segment title="Cast"/>
+                                    <segment title="Review"/>
                                 </segments>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Xv-Cj-8oy">
@@ -51,7 +51,7 @@
                             <constraint firstItem="Fff-vj-HGc" firstAttribute="leading" secondItem="8cT-R7-Yyd" secondAttribute="leading" id="bx1-cq-roC"/>
                             <constraint firstItem="iA8-EN-AS7" firstAttribute="leading" secondItem="8cT-R7-Yyd" secondAttribute="leading" constant="16" id="ghw-8I-3I4"/>
                             <constraint firstItem="8cT-R7-Yyd" firstAttribute="trailing" secondItem="Fff-vj-HGc" secondAttribute="trailing" id="oDh-Gm-6Qk"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Fff-vj-HGc" secondAttribute="bottom" id="qUw-YO-ohd"/>
+                            <constraint firstAttribute="bottom" secondItem="Fff-vj-HGc" secondAttribute="bottom" id="qUw-YO-ohd"/>
                             <constraint firstItem="2Xv-Cj-8oy" firstAttribute="top" secondItem="iA8-EN-AS7" secondAttribute="bottom" constant="14" id="zrN-5L-ZzX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8cT-R7-Yyd"/>
@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wk8-CE-TSX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="655" y="-360"/>
+            <point key="canvasLocation" x="1174" y="949"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="3Kf-wg-P9k">
@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yk-ZA-aCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="49"/>
+            <point key="canvasLocation" x="2607" y="949"/>
         </scene>
         <!--Base Page View Controller-->
         <scene sceneID="GS2-yw-sOx">
@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVY-8j-mCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="730"/>
+            <point key="canvasLocation" x="1881" y="949"/>
         </scene>
     </scenes>
 </document>

@@ -47,6 +47,7 @@ final class CustomizedSegmentedControl: UISegmentedControl {
         self.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: notSelectedTextColor], for: .normal)
         self.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedTextColor], for: .selected)
         self.tintColor = notSelectedTintColor
+        self.selectedSegmentTintColor = selectedTintColor
         self.addTarget(self, action: #selector(tabChanged), for: .valueChanged)
         setActiveTintColor(for: self.selectedSegmentIndex)
     }
