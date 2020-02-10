@@ -71,7 +71,7 @@
 		7C0B68E8239A45E500501DF3 /* movies_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0B68E7239A45E500501DF3 /* movies_appTests.swift */; };
 		7C0B68F3239A45E500501DF3 /* movies_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0B68F2239A45E500501DF3 /* movies_appUITests.swift */; };
 		7C17689A23F176E200D4C9F1 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17689923F176E200D4C9F1 /* MovieInfoViewController.swift */; };
-		7C17689C23F1771A00D4C9F1 /* MovieInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17689B23F1771A00D4C9F1 /* MovieInfoRouter.swift */; };
+		7C17689C23F1771A00D4C9F1 /* MovieInfoRouterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17689B23F1771A00D4C9F1 /* MovieInfoRouterImp.swift */; };
 		7C17689E23F177AC00D4C9F1 /* MovieInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17689D23F177AC00D4C9F1 /* MovieInfoPresenter.swift */; };
 		7C1768A023F177B600D4C9F1 /* MovieInfoPresenterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17689F23F177B600D4C9F1 /* MovieInfoPresenterImp.swift */; };
 		7C1768A223F177C300D4C9F1 /* MovieInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1768A123F177C300D4C9F1 /* MovieInfoAssembly.swift */; };
@@ -89,7 +89,6 @@
 		7C58D9F323B0BAFF00665B27 /* CastAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58D9F223B0BAFF00665B27 /* CastAssembly.swift */; };
 		7C58D9FA23B2409A00665B27 /* CastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58D9F923B2409A00665B27 /* CastCollectionViewCell.swift */; };
 		7C6818CF23A7BF2100EFFEDD /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6818CE23A7BF2100EFFEDD /* MovieDetailsViewController.swift */; };
-		7C6818D523A8C23B00EFFEDD /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6818D423A8C23B00EFFEDD /* ReviewViewController.swift */; };
 		7C6818DB23A8C27A00EFFEDD /* CastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6818DA23A8C27A00EFFEDD /* CastViewController.swift */; };
 		7CBCB13823A14AC200B2F484 /* GenresDataSourceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCB13723A14AC200B2F484 /* GenresDataSourceInput.swift */; };
 		7CBCB13A23A14B0000B2F484 /* GenresDataSourceOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBCB13923A14B0000B2F484 /* GenresDataSourceOutput.swift */; };
@@ -218,7 +217,7 @@
 		7C0B68F2239A45E500501DF3 /* movies_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movies_appUITests.swift; sourceTree = "<group>"; };
 		7C0B68F4239A45E500501DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C17689923F176E200D4C9F1 /* MovieInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
-		7C17689B23F1771A00D4C9F1 /* MovieInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoRouter.swift; sourceTree = "<group>"; };
+		7C17689B23F1771A00D4C9F1 /* MovieInfoRouterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoRouterImp.swift; sourceTree = "<group>"; };
 		7C17689D23F177AC00D4C9F1 /* MovieInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoPresenter.swift; sourceTree = "<group>"; };
 		7C17689F23F177B600D4C9F1 /* MovieInfoPresenterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoPresenterImp.swift; sourceTree = "<group>"; };
 		7C1768A123F177C300D4C9F1 /* MovieInfoAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoAssembly.swift; sourceTree = "<group>"; };
@@ -238,7 +237,6 @@
 		7C58D9F223B0BAFF00665B27 /* CastAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastAssembly.swift; sourceTree = "<group>"; };
 		7C58D9F923B2409A00665B27 /* CastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCollectionViewCell.swift; sourceTree = "<group>"; };
 		7C6818CE23A7BF2100EFFEDD /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
-		7C6818D423A8C23B00EFFEDD /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		7C6818DA23A8C27A00EFFEDD /* CastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastViewController.swift; sourceTree = "<group>"; };
 		7CBCB13723A14AC200B2F484 /* GenresDataSourceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresDataSourceInput.swift; sourceTree = "<group>"; };
 		7CBCB13923A14B0000B2F484 /* GenresDataSourceOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresDataSourceOutput.swift; sourceTree = "<group>"; };
@@ -369,17 +367,6 @@
 				7C17689523F1763000D4C9F1 /* View */,
 			);
 			path = Info;
-			sourceTree = "<group>";
-		};
-		7C03E2CE23A7ABF000554E5B /* Review */ = {
-			isa = PBXGroup;
-			children = (
-				7C6818D323A8C21800EFFEDD /* Assembly */,
-				7C6818D223A8C21100EFFEDD /* Presenter */,
-				7C6818D123A8C20A00EFFEDD /* Router */,
-				7C6818D023A8C20400EFFEDD /* View */,
-			);
-			path = Review;
 			sourceTree = "<group>";
 		};
 		7C03E2D523A7B08000554E5B /* SegmentedControl */ = {
@@ -832,7 +819,7 @@
 			isa = PBXGroup;
 			children = (
 				7C1768A323F177D900D4C9F1 /* MovieInfoRouterInput.swift */,
-				7C17689B23F1771A00D4C9F1 /* MovieInfoRouter.swift */,
+				7C17689B23F1771A00D4C9F1 /* MovieInfoRouterImp.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -880,35 +867,6 @@
 				7C58D9F923B2409A00665B27 /* CastCollectionViewCell.swift */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		7C6818D023A8C20400EFFEDD /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7C6818D423A8C23B00EFFEDD /* ReviewViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		7C6818D123A8C20A00EFFEDD /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		7C6818D223A8C21100EFFEDD /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		7C6818D323A8C21800EFFEDD /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assembly;
 			sourceTree = "<group>";
 		};
 		7C6818D623A8C25E00EFFEDD /* View */ = {
@@ -1093,7 +1051,6 @@
 		7CD1830923A3C9CA00965E03 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				7C03E2CE23A7ABF000554E5B /* Review */,
 				7C03E2CD23A7ABEA00554E5B /* Info */,
 				7C03E2CC23A7ABE400554E5B /* Cast */,
 			);
@@ -1446,7 +1403,7 @@
 				7C05D37423A117C200E4F34A /* MoviesListDataSource.swift in Sources */,
 				7C6818DB23A8C27A00EFFEDD /* CastViewController.swift in Sources */,
 				7C07F0C0239F8DA300644ACA /* MoviesListPresenterImp.swift in Sources */,
-				7C17689C23F1771A00D4C9F1 /* MovieInfoRouter.swift in Sources */,
+				7C17689C23F1771A00D4C9F1 /* MovieInfoRouterImp.swift in Sources */,
 				7C06EE8A239A61300058F16F /* Storyboards.swift in Sources */,
 				7C58D9E823ACF73000665B27 /* CastPresenterImp.swift in Sources */,
 				7C06EE8B239A61300058F16F /* Assets.swift in Sources */,
@@ -1486,7 +1443,6 @@
 				7C6818CF23A7BF2100EFFEDD /* MovieDetailsViewController.swift in Sources */,
 				7C1768A223F177C300D4C9F1 /* MovieInfoAssembly.swift in Sources */,
 				7C0B68D3239A45E400501DF3 /* SceneDelegate.swift in Sources */,
-				7C6818D523A8C23B00EFFEDD /* ReviewViewController.swift in Sources */,
 				7C58D9F323B0BAFF00665B27 /* CastAssembly.swift in Sources */,
 				7C03E2D723A7B09F00554E5B /* SegmentedControlDelegate.swift in Sources */,
 				7CBCB14823A14F4600B2F484 /* GenreNameCollectionViewCell.swift in Sources */,
