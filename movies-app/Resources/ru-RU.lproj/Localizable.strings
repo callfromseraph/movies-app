@@ -2,8 +2,8 @@
   Localizable.strings
   movies-app
 
-  Created by David Petrosyan on 12/6/19.
-  Copyright © 2019 David Petrosyan. All rights reserved.
+  Created by David Petrosyan on 2/12/20.
+  Copyright © 2020 David Petrosyan. All rights reserved.
 */
 
 "api_key" = "e1e23a5bd892bf9b19b7f9f402bed470";
@@ -19,3 +19,11 @@
 "module.movie_details" = "MovieDetails";
 "module.movies" = "Movies";
 "module.search" = "Search";
+
+"movie_details.info.storyboard_id" = "Info";
+"movie_details.cast.storyboard_id" = "Cast";
+"movie_details.review.storyboard_id" = "Review";
+
+"movie_details.info" = "Инфо";
+"movie_details.cast" = "Актеры";
+"movie_details.review" = "Обзор";

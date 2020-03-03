@@ -30,8 +30,26 @@ internal enum L10n {
   }
 
   internal enum MovieDetails {
+    /// Cast
+    internal static let cast = L10n.tr("Localizable", "movie_details.cast")
+    /// Info
+    internal static let info = L10n.tr("Localizable", "movie_details.info")
+    /// Review
+    internal static let review = L10n.tr("Localizable", "movie_details.review")
     /// MovieDetails
     internal static let storyboardName = L10n.tr("Localizable", "movie_details.storyboard_name")
+    internal enum Cast {
+      /// Cast
+      internal static let storyboardId = L10n.tr("Localizable", "movie_details.cast.storyboard_id")
+    }
+    internal enum Info {
+      /// Info
+      internal static let storyboardId = L10n.tr("Localizable", "movie_details.info.storyboard_id")
+    }
+    internal enum Review {
+      /// Review
+      internal static let storyboardId = L10n.tr("Localizable", "movie_details.review.storyboard_id")
+    }
   }
 
   internal enum Movies {

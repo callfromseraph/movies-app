@@ -10,7 +10,8 @@ import UIKit
 
 class MovieDetailsViewController: BaseViewController {
     
-    private let pages = ["info", "cast", "review"]
+    private let pages = [L10n.MovieDetails.Info.storyboardId, L10n.MovieDetails.Cast.storyboardId, L10n.MovieDetails.Review.storyboardId]
+    private let segmentedControlPages = [L10n.MovieDetails.info, L10n.MovieDetails.cast, L10n.MovieDetails.review]
     private let storyboardName = L10n.MovieDetails.storyboardName
     private var firstPage: BaseViewController!
     private var pageViewController: BasePageViewController?
@@ -18,6 +19,9 @@ class MovieDetailsViewController: BaseViewController {
     @IBOutlet weak var segmentedControl: CustomizedSegmentedControl! {
         didSet {
             segmentedControl.delegate = self
+            segmentedControlPages.enumerated().map {
+                segmentedControl.setTitle($0.element, forSegmentAt: $0.offset)
+            }
         }
     }
     

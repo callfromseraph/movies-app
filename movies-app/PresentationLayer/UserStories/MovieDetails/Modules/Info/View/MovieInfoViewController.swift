@@ -9,9 +9,22 @@
 import UIKit
 
 class MovieInfoViewController: BaseViewController {
-
+    
+    // MARK: - Properties
+    
+    var presenter: MovieInfoPresenter!
+    var router: MovieInfoRouterImp!
+    
+    // MARK: Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        router.viewController = self
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        MovieInfoAssembly.instance().inject(into: self)
     }
 }

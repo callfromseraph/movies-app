@@ -10,4 +10,21 @@ import EasyDi
 
 final class MovieInfoAssembly: Assembly {
     
+    var router: MovieInfoRouterImp {
+        return define(init: MovieInfoRouterImp())
+    }
+
+    var presenter: MovieInfoPresenter {
+        return define(init:
+            MovieInfoPresenterImp()
+        )
+    }
+
+    func inject(into controller: MovieInfoViewController) {
+        defineInjection(into: controller) {
+            $0.presenter = self.presenter
+            $0.router = self.router
+            return $0
+        }
+    }
 }

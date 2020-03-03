@@ -24,6 +24,7 @@ final class ReviewModuleAssembly: Assembly {
 		defineInjection(into: controller) {
 			$0.presenter = self.presenter
 			$0.router = self.router
+            return $0
 		}
 	}
 }
