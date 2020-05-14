@@ -18,10 +18,10 @@ class PluralForm {
     }
     
     private class func regexReplace(input: String, pattern: String, template: String) -> String {
-        let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+        let regex = try? NSRegularExpression(pattern: pattern, options: .caseInsensitive)
         let range = NSRange(location: 0, length: input.count)
-        let output = regex.stringByReplacingMatches(in: input, options: [], range: range, withTemplate: template)
-        return output
+        let output = regex?.stringByReplacingMatches(in: input, options: [], range: range, withTemplate: template)
+        return output ?? ""
     }
     
     public class func add(rule: String, with template: String) {
